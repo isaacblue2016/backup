@@ -1,0 +1,61 @@
+syntax enable
+syntax on
+colorscheme desert
+set number
+set smartindent
+
+set incsearch
+"set hls
+"set mouse=a
+
+"自动缩进与C语言风格缩进
+set autoindent
+set cindent
+
+"缩进宽度
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+"Tag List
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_WinWidth=36
+let Tlist_Use_Left_Window=1
+"Tlist -- Open Tlist cmd in vim
+
+"NERD_Tree
+let g:NERDTree_title='NERD Tree' 
+let NERDTreeWinPos="right"
+map <silent> <F8> :NERDTreeToggle<CR>
+
+"bufexplorer
+let g:bufExplorerDefaultHelp=0       " Do not show default help.
+let g:bufExplorerShowRelativePath=1  " Show relative paths.
+let g:bufExplorerSortBy='mru'        " Sort by most recently used.
+let g:bufExplorerSplitRight=0        " Split left.
+let g:bufExplorerSplitVertical=1     " Split vertically.
+let g:bufExplorerSplitVertSize = 30  " Split width
+let g:bufExplorerUseCurrentWindow=1  " Open in new window.
+
+"winmanager
+let g:winManagerWindowLayout='TagList'
+"let g:winManagerWindowLayout='NERDTree'
+map <silent> <F7> :WMToggle<cr>
+let g:winManagerWidth = 36
+
+"cscope
+:set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+"molokai
+"let g:molokai_original = 1
+let g:rehash256 = 1
+set t_Co=256
+"set background=dark
+"colorscheme molokai
+
+"==others================
+map q1 :set tags=/home/isaac/android-6.0.1_r11/tags
+map q2 :cs add /home/isaac/android-6.0.1_r11/cscope.out
+
+map aa \be
